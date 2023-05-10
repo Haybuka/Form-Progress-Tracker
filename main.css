@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  font-family: "Poppins", sans-serif;
 }
 .container {
   width: 1000px;
@@ -35,7 +36,6 @@ header nav {
   display: none;
 }
 .biodata ul {
-  /* background-color: yellow; */
   position: relative;
   padding: 0%;
 }
@@ -44,10 +44,21 @@ header nav {
   position: absolute;
   width: 0.5%;
   height: 100%;
-  /* background-color: #0f0f0f5c; */
-  background-color: #cf12e3;
+  /* background-color: #cf12e3; */
+  background-color: #ce12e33b;
   top: 5%;
   right: 13%;
+}
+
+.biodata ul::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: #ffffff;
+  bottom: -5%;
+  right: 13%;
+  z-index: 1;
 }
 .biodata li {
   margin-right: 20px;
@@ -59,31 +70,38 @@ header nav {
   z-index: 1;
 }
 
-.biodata li div {
-  /* background-color: red; */
-}
-
-.detail-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #000;
-  border-radius: 100%;
-  position: relative;
-  z-index: 10;
-  display: none;
-}
-
 .biodata li::before {
-  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f007";
+  font-size: 12px;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 50%;
-  background-color: rgb(167, 88, 18);
+  background-color: rgb(255, 255, 255);
   width: 30px;
   height: 30px;
   right: 0%;
   transform: translateY(-50%);
   border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.51);
 }
+
+.biodata li:nth-child(2)::before {
+  content: "\f3c5";
+}
+.biodata li:nth-child(3)::before {
+  content: "\f095";
+}
+.biodata li:nth-child(4)::before {
+  content: "\f015";
+}
+.biodata li:nth-child(5)::before {
+  content: "\f57d";
+}
+
 
 .biodata li::after {
   content: "";
@@ -105,26 +123,58 @@ header nav {
 main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   /* flex-direction: column; */
 }
 
 main form {
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
-  padding: 10px 30px;
+  padding: 30px;
 }
 
 main input {
   width: 100%;
-  padding: 8px 10px;
+  padding: 12px 10px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.29);
 }
 
+label section {
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  display: block;
+}
+label h3 {
+  margin: 10px 0;
+  font-size: 20px
+}
+
+label aside {
+  padding: 20px 0;
+  margin: 10px 0;
+}
+
+label aside p {
+  margin: 10px 0;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background-color: rgb(82, 82, 245);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
 @media screen and (max-width: 1000px) {
   .container {
     width: auto;
     padding: 0 10px;
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
   header {
     border-bottom: none;
@@ -181,6 +231,6 @@ main input {
   }
 
   .biodata li::after {
-    right: -5%;
+    right: -8%;
   }
 }
