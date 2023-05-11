@@ -144,7 +144,12 @@ main input {
   border: none;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.29);
 }
-
+label{
+  display: none;
+}
+label.active-input{
+  display: block;
+}
 label section {
   padding-bottom: 15px;
   border-bottom: 1px solid black;
@@ -173,6 +178,7 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1.5px;
+  margin: 10px 0;
 }
 @media screen and (max-width: 1000px) {
   main form{
