@@ -180,6 +180,12 @@ button {
   letter-spacing: 1.5px;
   margin: 10px 0;
 }
+
+
+
+
+
+/* End of tailwind */
 @media screen and (max-width: 1000px) {
   main form{
     padding: 20px 5px;
